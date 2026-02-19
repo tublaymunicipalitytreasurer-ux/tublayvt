@@ -676,8 +676,9 @@ function renderTable(data) {
                 <button class="action-btn delete-btn" data-id="${violationId}" data-action="delete">Delete</button>
             `;
         } else if (violation.status === 'Paid') {
+            // Render edit button disabled for paid violations
             actionButtons = `
-                <button class="action-btn edit-btn" data-id="${violationId}" data-action="edit">Edit</button>
+                <button class="action-btn edit-btn" data-id="${violationId}" data-action="edit" disabled>Edit</button>
                 <button class="action-btn undo-btn" data-id="${violationId}" data-action="undo">Undo</button>
                 <button class="action-btn delete-btn" data-id="${violationId}" data-action="delete">Delete</button>
             `;
